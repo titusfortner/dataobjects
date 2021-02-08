@@ -1,7 +1,6 @@
 package apis;
 
 import data.BaseData;
-import data.User;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
@@ -25,12 +24,4 @@ public abstract class BaseAPI {
                 .when()
                 .post(getAPIUrl());
     }
-
-    public User create() {
-        User user = new User();
-        create(user);
-        return user;
-    }
-
-
 }

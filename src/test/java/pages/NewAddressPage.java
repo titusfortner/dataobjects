@@ -1,14 +1,11 @@
 package pages;
 
-import data.User;
-
 import java.util.List;
 
 public class NewAddressPage extends BasePage {
     private static final String URL = "http://a.testaddressbook.com/addresses/new";
 
     public static NewAddressPage visit() {
-        SignInPage.visit().signIn(User.valid());
         browser().navigate().to(URL);
         return new NewAddressPage();
     }
